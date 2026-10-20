@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Screenshot</title>
+    <link rel="icon" href="icons/icon32.png" />
+    <link rel="stylesheet" href="result.css" />
+  </head>
+  <body class="loading">
+    <header class="toolbar">
+      <img class="logo" src="icons/icon48.png" alt="" width="32" height="32" />
+      <div class="details">
+        <h1 id="title">Building screenshot…</h1>
+        <p id="meta">Stitching sections together</p>
+      </div>
+      <div class="buttons" id="buttons" hidden>
+        <button id="zoom" class="ghost" title="Toggle fit / actual size">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-4-4M11 8v6M8 11h6" /></svg>
+          <span>Actual size</span>
+        </button>
+        <button id="copy" class="ghost">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2" /><path d="M5 15V6a2 2 0 0 1 2-2h8" /></svg>
+          <span>Copy</span>
+        </button>
+        <button id="download-jpg" class="ghost">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m-4-4 4 4 4-4M5 20h14" /></svg>
+          <span>JPG</span>
+        </button>
+        <button id="download-png" class="primary">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m-4-4 4 4 4-4M5 20h14" /></svg>
+          <span>Download PNG</span>
+        </button>
+      </div>
+    </header>
+
+    <p id="notice" class="notice" hidden></p>
+
+    <main>
+      <div class="spinner" aria-label="Loading"></div>
+      <figure class="frame" id="frame">
+        <img id="preview" class="fit" alt="Screenshot preview" />
+      </figure>
+    </main>
+
+    <footer class="copyright">© 2026 Alaa El-Basuony. All rights reserved.</footer>
+
+    <div id="toast" class="toast" role="status"></div>
+
+    <script type="module" src="result.js"></script>
+  </body>
+</html>

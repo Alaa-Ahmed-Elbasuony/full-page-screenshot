@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header class="brand">
+      <img src="icons/icon48.png" alt="" width="36" height="36" />
+      <div>
+        <h1>Full Page Screenshot</h1>
+        <p>Capture any page, top to bottom</p>
+      </div>
+    </header>
+
+    <div class="actions">
+      <button class="action primary" id="full">
+        <span class="action-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z" />
+            <path d="M14 3v5h5" />
+            <path d="M12 11v6m-3-3 3 3 3-3" />
+          </svg>
+        </span>
+        <span class="action-text">
+          <strong>Full page</strong>
+          <small>Everything, including scroll areas</small>
+        </span>
+      </button>
+
+      <button class="action" id="visible">
+        <span class="action-icon">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="4" width="18" height="13" rx="2" />
+            <path d="M8 21h8M12 17v4" />
+          </svg>
+        </span>
+        <span class="action-text">
+          <strong>Visible area</strong>
+          <small>Just what's on screen now</small>
+        </span>
+      </button>
+    </div>
+
+    <div class="option quality">
+      <span class="option-text">
+        <strong>Quality</strong>
+        <small id="quality-hint">Sharp, Retina-like detail</small>
+      </span>
+      <div class="segmented" role="radiogroup" aria-label="Quality">
+        <label><input type="radio" name="quality" value="1" /><span>Screen</span></label>
+        <label><input type="radio" name="quality" value="2" /><span>HD 2×</span></label>
+        <label><input type="radio" name="quality" value="3" /><span>4K 3×</span></label>
+      </div>
+    </div>
+
+    <label class="option">
+      <span class="option-text">
+        <strong>Expand scroll areas</strong>
+        <small>Unroll inner panels, sidebars and lists</small>
+      </span>
+      <input type="checkbox" id="expand" class="switch" checked />
+    </label>
+
+    <div id="progress" class="progress" hidden>
+      <div class="bar"><div class="fill" id="fill"></div></div>
+      <p id="progress-text">Preparing page…</p>
+    </div>
+
+    <p id="error" class="error" hidden></p>
+
+    <footer class="copyright">© 2026 Alaa El-Basuony. All rights reserved.</footer>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
